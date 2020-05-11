@@ -68,6 +68,9 @@ export function getElements(products, filters) {
     }
 }
 
+export function loadProducts() {
+    return fetch('/products.json');
+}
 
 export function generateProducts(count) {
     
@@ -109,3 +112,7 @@ export const BY_RANGE = 'BY_RANGE';
 export const GENRE = 'GENRE';
 export const brands = ['Nintendo', 'Sony', 'Xbox'];
 export const genres = ['Sports', 'Fighting', 'Adventures', 'Party', 'Racing', 'Shooter'];
+
+const output = generateProducts(100);
+
+JSON.stringify(output);

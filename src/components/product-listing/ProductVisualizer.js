@@ -39,25 +39,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const universoProductos = [
-
-]
-
-const brands = ['Nintendo', 'Sony', 'Xbox'];
-export const genres = ['Sports', 'Fighting', 'Adventures', 'Party', 'Racing', 'Shooter'];
 
 
-for(let i = 1; i < 23; i++) {
-  universoProductos.push(
-    { name: 'Product ' + i, price: i * 120, 
-    finalPrice: (i * 120) * .88, 
-    brand: brands[Math.floor((Math.random() * 3))],
-    genre: genres[Math.floor((Math.random() * genres.length))],
-    src: 'https://via.placeholder.com/150x200'}
-  );
-}
-
-export default function ProductVisualizer({filters, actions, onAddToCart}) {
+export default function ProductVisualizer({filters, actions, onAddToCart, universoProductos}) {
 
     const classes = useStyles();
 
@@ -136,6 +120,7 @@ export default function ProductVisualizer({filters, actions, onAddToCart}) {
 ProductVisualizer.propTypes = {
   actions: PropTypes.object.isRequired,
   filters: PropTypes.array.isRequired,
-  onAddToCart: PropTypes.func.isRequired
+  onAddToCart: PropTypes.func.isRequired,
+  universoProductos: PropTypes.array.isRequired
 }
 

@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
                 <ListItemIcon> <menuItem.icon style={{color: '#0c5375'}} fontSize="large"  /> </ListItemIcon>
                 <ListItemText primary={menuItem.label} />
               </ListItem>
-              <Divider />
+              <Divider key={menuItem.id} />
             </>
           ))}
         </List>

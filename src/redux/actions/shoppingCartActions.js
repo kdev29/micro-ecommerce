@@ -1,4 +1,5 @@
 import * as actionTypes from './actionTypes';
+import { loadProducts } from '../../components/product-listing/products-helpers';
 
 //this action will be called from a connected component
 export function addItemToCart(item) {
@@ -6,6 +7,27 @@ export function addItemToCart(item) {
         dispatch({
             type: actionTypes.ADD_TO_CART,
             payload: item
+        });
+    }
+}
+
+export function getProducts(){
+    
+    return function(dispatch, state) {
+
+
+        loadProducts().then(response => {
+            console.log(response);
+
+
+            response.json().then(products => {
+
+                dispatch({
+                    type: actionTypes.LOAD_PRODUCTS,
+                    payload: products
+                });
+            })
+            
         });
     }
 }

@@ -44,7 +44,7 @@ export default function VisibleProducts({products, onAddToCart}) {
 
         {products.map(i => (
               
-              <Card className={classes.root}>
+              <Card key={i.name} className={classes.root}>
                 <img style={{maxWidth: '90%'}} src={i.src} />
                 <Typography>{i.name}</Typography>
                 <Typography>{i.brand}</Typography>

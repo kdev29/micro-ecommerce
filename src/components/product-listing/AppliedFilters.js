@@ -56,7 +56,9 @@ export default function AppliedFilters({filters, onRemoveFilter, onClearFilters}
                  <div>
                  {
                      filters && filters.map(f => (                        
-                         <Chip title="aa" 
+                         <Chip  
+                            key={f.value}   
+                            title={`${f.type}: ${f.printValue ?  f.printValue(): f.value}`} 
                             className={classes.chip} 
                             label={`${f.type}: ${f.printValue ?  f.printValue(): f.value}`} 
                             onDelete={() => handleDelete(f)} 
