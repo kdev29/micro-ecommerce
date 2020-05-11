@@ -3,6 +3,8 @@
 
 Demo site:
 
+https://vigilant-ride-08f2a1.netlify.app/
+
 Built for later remembrance.
 
 Concepts implemented:
@@ -14,6 +16,7 @@ Concepts implemented:
 * Redux Session Management
 * React router
 * Lot of Material UI components
+* Responsive with material UI: breakpoints, spacing theme
 * Props, props, props, props
 * Presentational vs Container components
 * Objects as lookup containers
