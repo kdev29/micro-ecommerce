@@ -7,8 +7,8 @@ import PropTypes from 'prop-types';
 
 const useStyles = makeStyles({
     root: {
-      width: 230,
-      margin: '10px 20px',
+      width: 150,
+      margin: '10px 10px',
       padding: '10px 0',
       display: 'inline-block',
       cursor: 'pointer'
@@ -40,12 +40,12 @@ export default function VisibleProducts({products, onAddToCart}) {
     const classes = useStyles();
     return (
         <>
-        <Grid container>
+        <Grid container justify="center">
 
         {products.map(i => (
               
               <Card className={classes.root}>
-                <img src={i.src} />
+                <img style={{maxWidth: '90%'}} src={i.src} />
                 <Typography>{i.name}</Typography>
                 <Typography>{i.brand}</Typography>
                 <Typography>{i.genre}</Typography>

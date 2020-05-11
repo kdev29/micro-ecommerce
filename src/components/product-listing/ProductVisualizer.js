@@ -7,7 +7,7 @@ import { getElements } from './products-helpers';
 import VisibleProducts from './VisibleProducts';
 import PropTypes from 'prop-types';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: 230,
     margin: '10px 20px',
@@ -32,8 +32,11 @@ const useStyles = makeStyles({
   },
   finalPrice: {
     color: 'green'
+  },
+  paginator: {
+    padding: theme.spacing(2)
   }
-});
+}));
 
 
 const universoProductos = [
@@ -118,13 +121,13 @@ export default function ProductVisualizer({filters, actions, onAddToCart}) {
     const paginationLimit = parseInt(universoFiltrado.length / 10) + 1;
 
     return (       
-        <Grid className={classes.container} item xs={9}>
+        <Grid className={classes.container} item xs={12}>
            <Grid item xs={12}>            
             <ProductSorters onSortChange={handleSortByChange}></ProductSorters>
           </Grid>
           <VisibleProducts onAddToCart={handleAddToCart} products={universiVisible}></VisibleProducts>
-          <Grid item xs={12}>            
-            <Pagination page={currentIndex} onChange={handleChange} count={paginationLimit} color="primary" />
+          <Grid container justify="center">            
+            <Pagination className={classes.paginator} page={currentIndex} onChange={handleChange} count={paginationLimit} color="primary" />
           </Grid>          
         </Grid>
     )
