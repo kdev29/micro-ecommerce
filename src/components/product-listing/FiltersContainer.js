@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
-import { Grid, ExpansionPanel, ExpansionPanelDetails, Typography, ExpansionPanelSummary, Hidden, Drawer, Button, Container } from '@material-ui/core';
+import { Grid, Hidden, Drawer, Button } from '@material-ui/core';
 import PriceRangeSlider from './PriceRangeFilter';
 import AppliedFilters from './AppliedFilters';
 import Subcategories from './filters/Subcategories';
 import FilterByBrand from './filters/FilterByBrand';
 import PropTypes from 'prop-types';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import FilterListIcon from '@material-ui/icons/FilterList';
 
 export default function FiltersContainer({onFilterChange, filters, onClearFilters}) {

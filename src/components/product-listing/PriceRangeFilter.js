@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import { Button, Paper, Typography } from '@material-ui/core';
+import { Button, Paper, Typography, Grid } from '@material-ui/core';
 import SaveIcon from '@material-ui/icons/Save';
 import PropTypes from 'prop-types';
 
@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
-      width: '25ch',
+      width: '95%',
     },
   },
   button: {
@@ -52,6 +52,7 @@ export default function PriceRangeFilter({onFilterChange}) {
   }
 
   return (
+    <Grid item xs={12}>
     <Paper elevation={3} className={classes.paper}>
       <Typography variant="h6">Price</Typography>
       <form onSubmit={handleSubmit} className={classes.root} noValidate autoComplete="off">        
@@ -72,6 +73,7 @@ export default function PriceRangeFilter({onFilterChange}) {
         </div>        
       </form>
     </Paper>
+</Grid>
   );
 }
 

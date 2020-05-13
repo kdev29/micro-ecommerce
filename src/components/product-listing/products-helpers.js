@@ -69,7 +69,9 @@ export function getElements(products, filters) {
 }
 
 export function loadProducts() {
-    return fetch('/products.json');
+    const apiURL = process.env.REACT_APP_PRODUCTS_API_URL;
+    
+    return fetch(apiURL);
 }
 
 export function generateProducts(count) {

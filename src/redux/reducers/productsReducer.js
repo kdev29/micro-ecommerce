@@ -10,7 +10,7 @@ export default function productsReducer(state = initialState, action){
         case actions.LOAD_PRODUCTS:
             return [...action.payload];            
         default:
-            return initialState;
+            return state;
     }
     
 } 

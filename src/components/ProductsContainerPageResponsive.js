@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import { Grid, Snackbar, Button } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';import Paper from '@material-ui/core/Paper';
+import { Grid, Snackbar } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import FiltersContainer from './product-listing/FiltersContainer';
 import ProductVisualizer from './product-listing/ProductVisualizer';
 import PropTypes from 'prop-types'
